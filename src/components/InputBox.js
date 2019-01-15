@@ -4,7 +4,7 @@ import React from 'react';
 
 const Span = styled.span`
     font-size: 0.8em;
-	${props=>props.error? 'color:#cc0000;':''}
+	${props=>props.error? `color: ${props.theme.error};` :''}
 `;
 
 const BaseComponent = ({ children, value, onChange, mask, hint, error }) => {

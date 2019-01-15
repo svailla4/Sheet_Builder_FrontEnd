@@ -10,6 +10,7 @@ const Register = styled.div`
     grid-gap: 0px;
     grid-template-columns:  auto 700px auto;
     grid-template-areas: "... center ...";
+    margin-top: 15px;
 
     @media(max-width: 700px){
         grid-template-columns: 700px;

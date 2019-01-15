@@ -6,7 +6,7 @@ import Dropdown from './Dropdown';
 const Header = styled.div`
 	display: flex;
 	align-items:center;
-	background:#3D66B0; 
+	background:${props=>props.theme.main}; 
 	margin:0px;
 	font-size:1.0em;
 	color: white;

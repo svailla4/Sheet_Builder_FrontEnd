@@ -7,8 +7,8 @@ const Dropdown = styled(Flex.Item)`
 `;
 
 const Button = styled.button`
-    background-color: #3D66B0;
-    color: white;
+    background-color: ${props=>props.theme.main};
+    color: ${props=>props.theme.foreground};
     padding: 16px;
     border: none;
     cursor: pointer;
@@ -21,7 +21,7 @@ const LinkStyled = styled(Link)`
     text-decoration: none;
     display: block;
     &:hover{
-        background-color: #ddd
+        background-color: ${props=>props.theme.foreground}
     }
 `;
 //Container for button text and image
@@ -36,7 +36,7 @@ const Title = styled.span`
 // Dropdown content 
 const Content = styled.div`
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: ${props=>props.theme.foreground};
     left:0px;
     right:0px;
     margin-left:5px;

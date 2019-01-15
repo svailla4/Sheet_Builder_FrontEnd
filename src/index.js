@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import Index from './pages';
 import * as serviceWorker from './serviceWorker';
 import { createGlobalStyle } from 'styled-components';
 import configureStore from './store';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 
 const store = configureStore();
 
@@ -16,12 +17,23 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const theme = {
+	main: '#3D66B0',
+	mainLighter1: '#5780CA',
+	mainLighter2: '#7099E3',
+	foreground: 'white',
+	error: '#cc0000',
+	border: '#cfcfcf'
+}
+
 ReactDOM.render(
 	<Provider store={store}>
-		<Fragment> 
-			<Index /> 
-			<GlobalStyle/>  
-		</Fragment>
+		<ThemeProvider theme={theme}>
+			<Fragment>
+				<Index />
+				<GlobalStyle />
+			</Fragment>
+		</ThemeProvider>
 	</Provider>
 	, document.getElementById('root'));
 

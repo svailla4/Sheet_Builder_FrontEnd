@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
 	return (
-		<h1> HELLO WORLD</h1>
+		<h1> TODO IMPLEMENT HOME PAGE</h1>
 	);
 }
 
